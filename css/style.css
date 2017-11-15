@@ -9,6 +9,7 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	max-width: 100%;
 }
 
 #demo {
@@ -63,11 +64,11 @@ html, body {
 }
 
 #title {
-	width: 30%;
+	width: 50%;
 }
 
 #ex {
-	width: 80%;
+	width: 85%;
 }
 
 
