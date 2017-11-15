@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Website</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div id="title">Countdown Timer</div>
+	<div id="ex">Please enter a specific day (ie Halloween, Christmas) or a date in the format: Month Date, Year HH:MM:SS</div>
+	<div class="header">
+	<input type="text" id="myText" value=>
+	
+	<button type="button" id="enter" onclick="countdown()" onkeydown = "if (event.keyCode == 13) {
+                        countdown()}">Enter</button>
+	
+		</div>
+	
+	<p id="demo"></p>
+	<script>
+		
+		
+		function countdown() {
+		var countDownDate;
+		
+		var month = new Date().getMonth()+1;
+		var day = new Date().getDate();
+			
+		document.getElementById('enter').onclick = function() {
+			var year = new Date().getYear()-100 + 2000;
+   			var input = document.getElementById("myText").value.toLowerCase();
+			switch(input) {
+				case "halloween":
+					if (month == 11 || 12) {
+					year = year + 1;
+				}
+				countDownDate = new Date("October 31, " + year + " 00:00:00");
+				document.getElementById("cover").style.backgroundImage = "url('https://wallpaperscraft.com/image/halloween_holiday_pumpkin_faces_steam_fire_black_background_37229_2700x1800.jpg')";
+				document.getElementById("cover").style.backgroundSize = "cover";
+
+					break;
+				
+			
+				case "christmas": 
+				case "xmas": 
+				case "christmas day":
+				if (month == 12 && day >= 25) {
+					year = year + 1;
+				}
+				countDownDate = new Date("December 25, " + year + " 00:00:00");
+				document.getElementById("cover").style.backgroundImage = "url('http://newsfirst.lk/english/wp-content/uploads/2016/12/hith-father-christmas-lights-iStock_000029514386Large.jpg')";
+				document.getElementById("cover").style.backgroundSize = "cover"; 
+					break;
+
+			
+				case "new year's day": case "new year": case "new year's": case "new years":
+					year = year + 1;
+				countDownDate = new Date("January 1, " + year + " 00:00:00");
+				document.getElementById("cover").style.backgroundImage = "url('http://www.lanternclub.com.au/wp-content/uploads/2015/11/iStock_000072701399_Large.jpg')";
+				document.getElementById("cover").style.backgroundSize = "cover"; 
+					break;
+
+				case "valentine's day": case "valentines": case "valentine's": case "valentines day": case "Valentine":
+					if (month >= 2 && day >= 14) {
+						year = year + 1;
+					}
+				countDownDate = new Date("February 14, " + year + " 00:00:00");
+				document.getElementById("cover").style.backgroundImage = "url('https://krausgroupmarketing.com/wp-content/uploads/2016/02/Cup-with-heart-shapes-over-wooden-background-000055851524_Large.jpg')";
+				document.getElementById("cover").style.backgroundSize = "cover"; 
+				break;
+					
+				default:
+				countDownDate = new Date(input);
+				document.getElementById("cover").style.backgroundImage = "url('https://static.photocdn.pt/images/articles/2017_1/iStock-545347988.jpg')";
+				document.getElementById("cover").style.backgroundSize = "cover";
+
+				
+			}
+			
+				var x = setInterval(function() {
+
+  			var now = new Date().getTime();
+
+  			var distance = countDownDate - now;
+			
+
+  			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			if (isNaN(days) || !isNaN(parseInt(input)) || !isNaN(parseFloat(input))) {
+			  		document.getElementById("demo").innerHTML = "Please follow the correct format!"; 
+			} 
+			else if (seconds < 0) {
+			  		document.getElementById("demo").innerHTML = "That date is in the past!"; 
+			}
+			else {
+						document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  				+ minutes + "m " + seconds + "s ";			
+			}
+			
+			
+		}, 1000);
+			
+			
+		}
+		
+		document.getElementById("demo").innerHTML = "...";
+		
+		}
+		
+		
+		countdown()
+		
+</script>
+
+<div id="cover"></div>
+	<script>
+			document.getElementById("cover").style.backgroundImage = "url('https://static.photocdn.pt/images/articles/2017_1/iStock-545347988.jpg')";
+		document.getElementById("cover").style.backgroundSize = "cover";
+		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
+
+
+	</script>
+	
+
+</body>
+</html>
