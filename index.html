@@ -39,11 +39,9 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
-				document.getElementById("halloween").style.display = "block";
-
-
-
-
+				document.getElementById("image").style.display = "block";
+				document.getElementById("image").src = "images/halloween.jpg"
+					
 					break;
 				
 			
@@ -54,8 +52,8 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
-				document.getElementById("christmas").style.display = "block";
-
+				document.getElementById("image").style.display = "block";
+						document.getElementById("image").src = "images/christmas.jpg"
 
 
 					break;
@@ -64,7 +62,8 @@
 				case "new year's day": case "new year": case "new year's": case "new years":
 					year = year + 1;
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
-				document.getElementById("newyear").style.display = "block";
+				document.getElementById("image").style.display = "block";
+				document.getElementById("image").src = "images/christmas.jpg"
 
 
 					break;
@@ -74,12 +73,16 @@
 						year = year + 1;
 					}
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
-				document.getElementById("valentines").style.display = "block";
+				document.getElementById("image").style.display = "block";
+									document.getElementById("image").src = "images/valentines.jpg"
+
 				break;
 					
 				default:
 				countDownDate = new Date(input);
-				document.getElementById("mountain").style.display = "block";
+				document.getElementById("image").style.display = "block";
+									document.getElementById("image").src = "images/mountain.jpg"
+
 
 
 
@@ -125,23 +128,20 @@
 		
 </script>
 
-<div id="cover"></div>
-	<img id="christmas" class="load" src="images/christmas.jpg">
+<div id="cover">
+	<img id="image" class="load" src="images/christmas.jpg">
 	<img id="newyear" class="load" src="images/fireworks.jpg"> 
 	<img id="halloween" class="load" src="images/halloween.jpg"> 
 	<img id="mountain" class="load" src="images/mountain.jpg"> 
 	<img id="valentines" class="load" src="images/valentines.jpg"> 
-
+</div>
 	<script>
 		document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
 		document.getElementById("cover").style.backgroundSize = "cover";
 		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
 
 
-	</script>
-
-	<p id="load"></p>
-	
+	</script>	
 
 </body>
 </html>
