@@ -39,10 +39,7 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
-				document.getElementById("cover").style.backgroundImage = "url('images/halloween.jpg')";
-				document.getElementById("cover").style.backgroundSize = "cover";
-				document.getElementById("cover").style.backgroundRepeat = "no-repeat";
-				document.getElementById("cover").style.backgroundPosition = "top";
+				document.getElementById("halloween").style.display = "block";
 
 
 
@@ -67,10 +64,7 @@
 				case "new year's day": case "new year": case "new year's": case "new years":
 					year = year + 1;
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
-				document.getElementById("cover").style.backgroundImage = "url('images/fireworks.jpg')";
-				document.getElementById("cover").style.backgroundSize = "cover";
-				document.getElementById("cover").style.backgroundPosition = "top";
-				document.getElementById("cover").style.backgroundRepeat = "no-repeat";
+				document.getElementById("newyear").style.display = "block";
 
 
 					break;
@@ -80,18 +74,13 @@
 						year = year + 1;
 					}
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
-				document.getElementById("cover").style.backgroundImage = "url('images/valentines.jpg')";
-				document.getElementById("cover").style.backgroundSize = "cover"; 
-				document.getElementById("cover").style.backgroundPosition = "top";
-				document.getElementById("cover").style.backgroundRepeat = "no-repeat";
+				document.getElementById("valentines").style.display = "block";
 				break;
 					
 				default:
 				countDownDate = new Date(input);
-				document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
-				document.getElementById("cover").style.backgroundSize = "cover";
-				document.getElementById("cover").style.backgroundPosition = "top";
-				document.getElementById("cover").style.backgroundRepeat = "no-repeat";
+				document.getElementById("mountain").style.display = "block";
+
 
 
 
@@ -137,7 +126,12 @@
 </script>
 
 <div id="cover"></div>
-	<img id="christmas" class="load" src="images/christmas.jpg"> 
+	<img id="christmas" class="load" src="images/christmas.jpg">
+	<img id="newyear" class="load" src="images/fireworks.jpg"> 
+	<img id="halloween" class="load" src="images/halloween.jpg"> 
+	<img id="mountain" class="load" src="images/mountain.jpg"> 
+	<img id="valentines" class="load" src="images/valentines.jpg"> 
+
 	<script>
 		document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
 		document.getElementById("cover").style.backgroundSize = "cover";
