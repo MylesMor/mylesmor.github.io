@@ -47,6 +47,8 @@
 				case "christmas": 
 				case "xmas": 
 				case "christmas day":
+				case "december 25":
+				case "25 december":
 				if (month == 12 && day >= 25) {
 					year = year + 1;
 				}
@@ -58,30 +60,48 @@
 					break;
 
 			
-				case "new year's day": case "new year": case "new year's": case "new years":
+				case "new year's day": case "new year": case "new year's": case "new years": case "1 january": case "january 1":
 					year = year + 1;
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
-				document.getElementById("image").src = "images/fireworks.jpg"
+				document.getElementById("image").src = "images/fireworks.jpg";
 				document.getElementById("image").style.opacity = "1";
 
 
 
 					break;
 
-				case "valentine's day": case "valentines": case "valentine's": case "valentines day": case "Valentine":
+				case "valentine's day": case "valentines": case "valentine's": case "valentines day": case "valentine":
 					if (month >= 2 && day >= 14) {
 						year = year + 1;
 					}
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-									document.getElementById("image").src = "images/valentines.jpg"
+				document.getElementById("image").src = "images/valentines.jpg";
 
+				break;
+					
+				case "st patrick's day": case "st patricks day": case "st paddy's": case "st paddys":
+						if (month >= 3 && day >= 17) {
+						year = year + 1;
+					}
+				countDownDate = new Date("March 17, " + year + " 00:00:00");
+				document.getElementById("image").style.opacity = "1";
+				document.getElementById("image").src = "images/patrick.jpg";
+				break;
+					
+				case "april fools": case "april fool's": case "april 1": case "1 april":
+				if (month >= 4 && day >= 1) {
+						year = year + 1;
+					}
+				countDownDate = new Date("April 1, " + year + " 00:00:00");
+				document.getElementById("image").style.opacity = "1";
+				document.getElementById("image").src = "images/april.jpg";
 				break;
 					
 				default:
 				countDownDate = new Date(input);
 				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/mountain.jpg"
+				document.getElementById("image").src = "images/mountain.jpg";
 
 
 
