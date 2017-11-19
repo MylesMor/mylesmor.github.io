@@ -19,7 +19,7 @@
 	
 	<p id="demo"></p>
 	<script>
-		
+
 		
 		function countdown() {
 		var countDownDate;
@@ -39,8 +39,10 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
+				if (!((image1 && image2) == 1)) {
 				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/halloween.jpg"
+				document.getElementById("image").src = "images/halloween.jpg";
+	
 					
 					break;
 				
@@ -82,7 +84,7 @@
 				default:
 				countDownDate = new Date(input);
 				document.getElementById("image").style.opacity = "1";
-									document.getElementById("image").src = "images/mountain.jpg"
+				document.getElementById("image").src = "images/mountain.jpg"
 
 
 
@@ -131,6 +133,7 @@
 
 <div id="cover">
 	<img id="image" class="load">
+	<img id="christmas" class="load" src="images/christmas.jpg"> 	
 	<img id="newyear" class="load" src="images/fireworks.jpg"> 
 	<img id="halloween" class="load" src="images/halloween.jpg"> 
 	<img id="mountain" class="load" src="images/mountain.jpg"> 
