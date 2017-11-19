@@ -10,6 +10,7 @@ html, body {
     -o-background-size: cover;
     background-size: cover;
 	max-width: 100%;
+	background: #ffffff url('images/christmas.jpg') no-repeat -100px -100px;
 }
 
 #demo {
