@@ -39,7 +39,7 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
-				document.getElementById("image").style.display = "block";
+				document.getElementById("image").style.opacity = "1";
 				document.getElementById("image").src = "images/halloween.jpg"
 					
 					break;
@@ -52,7 +52,7 @@
 					year = year + 1;
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
-				document.getElementById("image").style.display = "block";
+				document.getElementById("image").style.opacity = "1";
 						document.getElementById("image").src = "images/christmas.jpg"
 
 
@@ -62,8 +62,9 @@
 				case "new year's day": case "new year": case "new year's": case "new years":
 					year = year + 1;
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
-				document.getElementById("image").style.display = "block";
-				document.getElementById("image").src = "images/christmas.jpg"
+				document.getElementById("image").src = "images/fireworks.jpg"
+				document.getElementById("image").style.opacity = "1";
+
 
 
 					break;
@@ -73,14 +74,14 @@
 						year = year + 1;
 					}
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
-				document.getElementById("image").style.display = "block";
+				document.getElementById("image").style.opacity = "1";
 									document.getElementById("image").src = "images/valentines.jpg"
 
 				break;
 					
 				default:
 				countDownDate = new Date(input);
-				document.getElementById("image").style.display = "block";
+				document.getElementById("image").style.opacity = "1";
 									document.getElementById("image").src = "images/mountain.jpg"
 
 
@@ -129,7 +130,7 @@
 </script>
 
 <div id="cover">
-	<img id="image" class="load" src="images/christmas.jpg">
+	<img id="image" class="load">
 	<img id="newyear" class="load" src="images/fireworks.jpg"> 
 	<img id="halloween" class="load" src="images/halloween.jpg"> 
 	<img id="mountain" class="load" src="images/mountain.jpg"> 
