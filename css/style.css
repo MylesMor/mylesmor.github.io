@@ -10,7 +10,6 @@ html, body {
     -o-background-size: cover;
     background-size: cover;
 	max-width: 100%;
-	background: url("images/christmas.jpg") no-repeat -9999px -9999px;
 }
 
 #demo {
@@ -72,6 +71,12 @@ html, body {
 
 #ex {
 	width: 85%;
+}
+
+#load {
+	content: url("images/christmas.jpg") url("images/valentines.jpg") url("images/fireworks.jpg") url("images/halloween.jpg");
+	width: 0;
+	height: 0;
 }
 
 
