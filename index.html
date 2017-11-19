@@ -17,7 +17,7 @@
 	
 		</div>
 	
-	<p id="demo"></p>
+	<p id="time"></p>
 	<script>
 
 		
@@ -46,9 +46,9 @@
 			
 				case "christmas": 
 				case "xmas": 
-				case "christmas day":
-				case "december 25":
-				case "25 december":
+				case "christmasday":
+				case "december25":
+				case "25december":
 				if (month == 12 && day >= 25) {
 					year = year + 1;
 				}
@@ -60,7 +60,7 @@
 					break;
 
 			
-				case "new year's day": case "new year": case "new year's": case "new years": case "1 january": case "january 1":
+				case "newyear'sday": case "newyear": case "newyear's": case "newyears": case "1january": case "january1":
 					year = year + 1;
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
 				document.getElementById("image").src = "images/fireworks.jpg";
@@ -70,7 +70,7 @@
 
 					break;
 
-				case "valentine's day": case "valentines": case "valentine's": case "valentines day": case "valentine":
+				case "valentine'sday": case "valentines": case "valentine's": case "valentinesday": case "valentine":
 					if (month >= 2 && day >= 14) {
 						year = year + 1;
 					}
@@ -80,7 +80,7 @@
 
 				break;
 					
-				case "st patrick's day": case "st patricks day": case "st paddys": case "st paddy's day": case "st paddy's":
+				case "stpatrick'sday": case "stpatricksday": case "stpaddys": case "stpaddy'sday": case "stpaddy's":
 						if (month >= 3 && day >= 17) {
 						year = year + 1;
 					}
@@ -89,7 +89,7 @@
 				document.getElementById("image").src = "images/patrick.jpg";
 				break;
 					
-				case "april fools": case "april fool's": case "april 1": case "1 april":
+				case "aprilfools": case "aprilfool's": case "april1": case "1april":
 				if (month >= 4 && day >= 1) {
 						year = year + 1;
 					}
@@ -123,13 +123,13 @@
   			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 			if (isNaN(days) || !isNaN(parseInt(input)) || !isNaN(parseFloat(input))) {
-			  		document.getElementById("demo").innerHTML = "Please follow the correct format!"; 
+			  		document.getElementById("time").innerHTML = "Please follow the correct format!"; 
 			} 
 			else if (seconds < 0) {
-			  		document.getElementById("demo").innerHTML = "That date is in the past!"; 
+			  		document.getElementById("time").innerHTML = "That date is in the past!"; 
 			}
 			else {
-						document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+						document.getElementById("time").innerHTML = days + "d " + hours + "h "
   				+ minutes + "m " + seconds + "s ";			
 			}
 			
@@ -139,12 +139,15 @@
 			
 		}
 		
-		document.getElementById("demo").innerHTML = "...";
+		document.getElementById("time").innerHTML = "...";
 		
 		}
 		
 		
 		countdown()
+		
+		
+		
 		
 </script>
 
@@ -164,9 +167,21 @@
 		document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
 		document.getElementById("cover").style.backgroundSize = "cover";
 		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
+		document.getElementById("cover").style.backgroundRepeat = "no-repeat";
 
 
 	</script>	
+	
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-109839499-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  
 
 </body>
 </html>
