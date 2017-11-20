@@ -53,7 +53,7 @@
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
 					
-				if (!isMobile || w >= 800) {
+				if (!isMobile || window.innerWidth >= 800) {
 					document.getElementById("image").src = "images/halloween.jpg";
 				} else {
 					document.getElementById("image").src = "images/halloweenmobile.jpg";
@@ -86,7 +86,7 @@
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-                if (!isMobile && window.innerHeight >= 750) {
+                if (!isMobile && window.innerWidth >= 750) {
 					document.getElementById("image").src = "images/christmas.jpg";
 				} else {
 					document.getElementById("image").src = "images/christmasmobile.jpg";
