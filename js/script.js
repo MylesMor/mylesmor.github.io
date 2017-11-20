@@ -259,6 +259,7 @@
 		
 		// Starting 
 		document.getElementById("time").innerHTML = "...";
+			
 		
 		}
 
