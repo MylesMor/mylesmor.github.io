@@ -66,7 +66,8 @@
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-
+                    
+                // If mobile provide a more suitable image.
                 if (isMobile) {
                     document.getElementById("image").src = "images/christmasmobile.jpg";
                 } else {
