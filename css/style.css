@@ -51,6 +51,7 @@ html, body {
     background-size: cover;
 	max-width: 100%;
     background-repeat: no-repeat;
+	transform: scale(1.5);
 	
 }
 
