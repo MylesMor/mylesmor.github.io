@@ -5,9 +5,6 @@
         	document.getElementById("enter").click();
     		}
 		});
-		
-		document.getElementById("image").src = "images/landscape.jpg";
-		
 
 
 		function countdown() {
@@ -210,5 +207,4 @@
 		
 		
 		countdown();
-		setBackground();
 		
