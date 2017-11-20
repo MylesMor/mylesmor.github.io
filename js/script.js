@@ -222,20 +222,31 @@
 					// Splits the input at every slash, leading to list with day, month and year.
 					var slashdatelist = input.split("/");
 					
+					var spacesplit = input.split(" ");
+					
 					// Checks that the day, month and year are all integers.
 					if (!((isNaN(parseInt(slashdatelist[0]))) && isNaN(parseInt(slashdatelist[1])) && isNaN(parseInt(slashdatelist[2]))  )) {
 						
 						// If the length of the year value is 4, put it straight into new Date().
 						if (slashdatelist[2].length == 4) {
+							if (spacesplit.length == 1) {
 							countDownDate = new Date(slashdatelist[1] + " " + slashdatelist[0] + ", " + slashdatelist[2]);
+							}
+							else {
+								countDownDate = new Date(slashdatelist[1] + " " + slashdatelist[0] + ", " + slashdatelist[2] + " " + spacesplit[1]);
+
+							}
 						}
 						
 						// Else calculate the year by adding 2000 to their entry.
 						else {
 							var yearint = parseInt(slashdatelist[2])+2000;
+							if (spacesplit.length == 1) {
 							countDownDate = new Date(slashdatelist[1] + " " + slashdatelist[0] + ", " + yearint);
-
-							console.log(countDownDate)
+							
+							} else {
+								countDownDate = new Date(slashdatelist[1] + " " + slashdatelist[0] + ", " + yearint + " " + spacesplit[1]);
+							}
 						}
 						
 					} else {
