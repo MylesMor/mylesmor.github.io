@@ -220,13 +220,20 @@
 				default:
 					
 					// Splits the input at every slash, leading to list with day, month and year.
-					var slashdatelist = input.split("/");
+					var slashdatelist = [];
+					if (input.includes("/")) {
+					slashdatelist = input.split("/");
+					}
 					
-					var spacesplit = input.split(" ");
+					var spacesplit = [];
+					if ((input.includes(" "))) {
+						spacesplit = input.split(" ");
+					}
+			
 					
 					// Checks that the day, month and year are all integers.
 					if (!((isNaN(parseInt(slashdatelist[0]))) && isNaN(parseInt(slashdatelist[1])) && isNaN(parseInt(slashdatelist[2]))  )) {
-						
+
 						// If the length of the year value is 4, put it straight into new Date().
 						if (slashdatelist[2].length == 4) {
 							if (spacesplit.length == 1) {
@@ -274,10 +281,6 @@
 
 					}
 						});
-
-
-
-
 
 				
 			}
