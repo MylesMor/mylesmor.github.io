@@ -156,7 +156,7 @@
 				
 				// Sets the background to the default mountain image.
 				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/mountain.jpg";
+				document.getElementById("image").src = "images/landscape.jpg";
 
 
 
@@ -208,7 +208,7 @@
 		
 		countdown()
 		
-		document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
+		document.getElementById("cover").style.backgroundImage = "url('images/landscape.jpg')";
 		document.getElementById("cover").style.backgroundSize = "cover";
 		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
 		document.getElementById("cover").style.backgroundRepeat = "no-repeat";
