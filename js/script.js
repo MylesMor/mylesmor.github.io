@@ -261,50 +261,7 @@
 		document.getElementById("time").innerHTML = "...";
 		
 		}
-<<<<<<< HEAD
 
-if (!isMobile) {
-	var christmas = document.createElement("img");
-	christmas.className = "load";
-	christmas.src = "images/christmas.jpg";
-	var halloween = document.createElement("img");
-	halloween.className = "load";
-	halloween.src = "images/halloween.jpg";	
-	var valentines = document.createElement("img");
-	valentines.className = "load";
-	valentines.src = "images/valentines.jpg";	
-	var patrick = document.createElement("img");
-	patrick.className = "load";
-	patrick.src = "images/patrick.jpg";	
-	var landscape = document.createElement("img");
-	landscape.className = "load";
-	landscape.src = "images/landscape.jpg";
-	var ny = document.createElement("img");
-	ny.className = "load";
-	ny.src = "images/fireworks.jpg";
-} else {
-		var christmas = document.createElement("img");
-	christmas.className = "load";
-	christmas.src = "images/christmasmobile.jpg";
-	var halloween = document.createElement("img");
-	halloween.className = "load";
-	halloween.src = "images/halloweenmobile.jpg";	
-	var valentines = document.createElement("img");
-	valentines.className = "load";
-	valentines.src = "images/valentinesmobile.jpg";	
-	var patrick = document.createElement("img");
-	patrick.className = "load";
-	patrick.src = "images/clovermobile.jpg";	
-	var landscape = document.createElement("img");
-	landscape.className = "load";
-	landscape.src = "images/sea.jpg";
-	var ny = document.createElement("img");
-	ny.className = "load";
-	ny.src = "images/fireworksmobile.jpg";
-}
-=======
-		
->>>>>>> parent of e43bc6d... CHanges
 		
 		countdown();
 
