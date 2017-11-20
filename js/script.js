@@ -209,7 +209,7 @@
                         break;
                 }
             
-                // Else, display the countdown.
+            // Else, display the countdown.
 			} else {
                 document.getElementById("time").innerHTML = days + "d " + hours + "h "
   				+ minutes + "m " + seconds + "s ";	
