@@ -262,19 +262,43 @@
 		}
 
 if (!isMobile) {
-	document.createElement("img").className("load").src = "images/christmas.jpg";
-	document.createElement("img").className("load").src = "images/fireworks.jpg";
-	document.createElement("img").className("load").src = "images/halloween.jpg";
-	document.createElement("img").className("load").src = "images/valentines.jpg";
-	document.createElement("img").className("load").src = "images/patrick.jpg";
-	document.createElement("img").className("load").src = "images/landscape.jpg";
+	var christmas = document.createElement("img");
+	christmas.className = "load";
+	christmas.src = "images/christmas.jpg";
+	var halloween = document.createElement("img");
+	halloween.className = "load";
+	halloween.src = "images/halloween.jpg";	
+	var valentines = document.createElement("img");
+	valentines.className = "load";
+	valentines.src = "images/valentines.jpg";	
+	var patrick = document.createElement("img");
+	patrick.className = "load";
+	patrick.src = "images/patrick.jpg";	
+	var landscape = document.createElement("img");
+	landscape.className = "load";
+	landscape.src = "images/landscape.jpg";
+	var ny = document.createElement("img");
+	ny.className = "load";
+	ny.src = "images/fireworks.jpg";
 } else {
-	document.createElement("img").className("load").src = "images/sea.jpg";
-	document.createElement("img").className("load").src = "images/christmasmobile.jpg";
-	document.createElement("img").className("load").src = "images/clovermobile.jpg";
-	document.createElement("img").className("load").src = "images/halloweenmobile.jpg";
-	document.createElement("img").className("load").src = "images/fireworksmobile.jpg";
-	document.createElement("img").className("load").src = "images/valentinesmobile.jpg";
+		var christmas = document.createElement("img");
+	christmas.className = "load";
+	christmas.src = "images/christmasmobile.jpg";
+	var halloween = document.createElement("img");
+	halloween.className = "load";
+	halloween.src = "images/halloweenmobile.jpg";	
+	var valentines = document.createElement("img");
+	valentines.className = "load";
+	valentines.src = "images/valentinesmobile.jpg";	
+	var patrick = document.createElement("img");
+	patrick.className = "load";
+	patrick.src = "images/clovermobile.jpg";	
+	var landscape = document.createElement("img");
+	landscape.className = "load";
+	landscape.src = "images/sea.jpg";
+	var ny = document.createElement("img");
+	ny.className = "load";
+	ny.src = "images/fireworksmobile.jpg";
 }
 		
 		countdown();
