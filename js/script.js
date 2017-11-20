@@ -52,18 +52,20 @@
 				// Set the new date for the timer to count to, and also set the background.
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-					console.log(w);
-					if (!isMobile || w >= 800) {
-				document.getElementById("image").src = "images/halloween.jpg";
-					} else {
-				document.getElementById("image").src = "images/halloweenmobile.jpg";
-					}
-					window.addEventListener("resize", function() {
-    				w = window.innerWidth;
-				if (!isMobile && w >= 800) {
+					
+				if (!isMobile || w >= 800) {
 					document.getElementById("image").src = "images/halloween.jpg";
 				} else {
 					document.getElementById("image").src = "images/halloweenmobile.jpg";
+				}
+					
+					// Listener for changing picture.
+					window.addEventListener("resize", function() {
+    					w = window.innerWidth;
+					if (!isMobile && w >= 800) {
+						document.getElementById("image").src = "images/halloween.jpg";
+					} else {
+						document.getElementById("image").src = "images/halloweenmobile.jpg";
 
 					}
 						});
@@ -93,11 +95,11 @@
 					
                 // If mobile provide a more suitable image.
    					window.addEventListener("resize", function() {
-    				w = window.innerWidth;
-				if (!isMobile && w >= 750) {
-					document.getElementById("image").src = "images/christmas.jpg";
-				} else {
-					document.getElementById("image").src = "images/christmasmobile.jpg";
+    					w = window.innerWidth;
+					if (!isMobile && w >= 750) {
+						document.getElementById("image").src = "images/christmas.jpg";
+					} else {
+						document.getElementById("image").src = "images/christmasmobile.jpg";
 
 					}
 						});
@@ -125,11 +127,11 @@
 
 					}
 					window.addEventListener("resize", function() {
-    				w = window.innerWidth;
-				if (!isMobile && w >= 900) {
-					document.getElementById("image").src = "images/fireworks.jpg";
-				} else {
-					document.getElementById("image").src = "images/fireworksmobile.jpg";
+    					w = window.innerWidth;
+					if (!isMobile && w >= 900) {
+						document.getElementById("image").src = "images/fireworks.jpg";
+					} else {
+						document.getElementById("image").src = "images/fireworksmobile.jpg";
 
 					}
 						});
@@ -158,11 +160,11 @@
 					
 				                // If mobile provide a more suitable image.
    					window.addEventListener("resize", function() {
-    				w = window.innerWidth;
-				if (!isMobile && w >= 900) {
-					document.getElementById("image").src = "images/valentines.jpg";
-				} else {
-					document.getElementById("image").src = "images/valentinesmobile.jpg";
+    					w = window.innerWidth;
+						if (!isMobile && w >= 900) {
+							document.getElementById("image").src = "images/valentines.jpg";
+						} else {
+							document.getElementById("image").src = "images/valentinesmobile.jpg";
 
 					}
 					});
@@ -181,19 +183,19 @@
 					
 				countDownDate = new Date("March 17, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-					if (!isMobile && window.innerWidth >= 900) {
-				document.getElementById("image").src = "images/patrick.jpg";
-					} else {
-				document.getElementById("image").src = "images/clovermobile.jpg";
-
-					}
-						
-   					window.addEventListener("resize", function() {
-    				w = window.innerWidth;
-				if (!isMobile && w >= 900) {
+				if (!isMobile && window.innerWidth >= 900) {
 					document.getElementById("image").src = "images/patrick.jpg";
 				} else {
 					document.getElementById("image").src = "images/clovermobile.jpg";
+
+					}
+						
+   				window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+					if (!isMobile && w >= 900) {
+						document.getElementById("image").src = "images/patrick.jpg";
+					} else {
+						document.getElementById("image").src = "images/clovermobile.jpg";
 
 					}
 					});
@@ -251,13 +253,13 @@
 				} else {
 					document.getElementById("image").src = "images/sea.jpg";
 
-					}
-					window.addEventListener("resize", function() {
+				}
+				window.addEventListener("resize", function() {
     				w = window.innerWidth;
-				if (!isMobile && w >= 900) {
-					document.getElementById("image").src = "images/landscape.jpg";
-				} else {
-					document.getElementById("image").src = "images/sea.jpg";
+					if (!isMobile && w >= 900) {
+						document.getElementById("image").src = "images/landscape.jpg";
+					} else {
+						document.getElementById("image").src = "images/sea.jpg";
 
 					}
 						});
