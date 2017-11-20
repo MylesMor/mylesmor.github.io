@@ -7,17 +7,21 @@
 		});
 
 
+
+
 		function countdown() {
 		var countDownDate;
-		
+		  
+        var aprilfools = false;
 			
 		var month = new Date().getMonth()+1;
 		var day = new Date().getDate();
 		
 		// Runs when button is clicked or enter is pressed.
 		document.getElementById('enter').onclick = function() {
-			
-			
+			            
+            aprilfools = false;
+            
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
    			var input = document.getElementById("myText").value.toLowerCase();
@@ -120,9 +124,9 @@
 					}
 				
 				countDownDate = new Date("April 1, " + year + " 00:00:00");
-				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/april.jpg";
-				
+                document.getElementById("image").style.opacity = "1";
+				document.getElementById("image").src = "images/landscape.jpg";
+                aprilfools = true;
 				break;
 					
 				// The default case - what happens when a user enters their own date.
@@ -164,7 +168,7 @@
 
 				
 			}
-			
+			            
 			// This code runs once every second to calculate the time correctly.
 			var x = setInterval(function() {
 			
@@ -184,19 +188,36 @@
 			if (isNaN(days)) {
 			  		document.getElementById("time").innerHTML = "Please follow the correct format!"; 
 			} 
-			// If the date is in the past, display this message.
+			
+            // If the date is in the past, display this message.
 			else if (seconds < 0) {
 			  		document.getElementById("time").innerHTML = "That date is in the past!"; 
 			}
-			// Else, display the countdown.
-			else {
-						document.getElementById("time").innerHTML = days + "d " + hours + "h "
-  				+ minutes + "m " + seconds + "s ";			
-			}
+			
+            // Else, if aprilfools is true, randomise it!
+			else if (aprilfools == true){
+                var random = Math.floor((Math.random() * 3) + 1);
+                switch (random) {
+                    case 1:
+                        document.getElementById("time").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s " + ">:)";
+                        break;
+                    case 2:
+ 	                  document.getElementById("time").innerHTML = minutes + "m " + seconds + "s " + days + "d " + hours + "h " + ">:)";
+                        break;
+                    case 3:
+                        document.getElementById("time").innerHTML = seconds + "s " + days + "d " + hours + "h " + minutes + "m " + ">:)"; 
+                        break;
+                }
+            
+                // Else, display the countdown.
+			} else {
+                document.getElementById("time").innerHTML = days + "d " + hours + "h "
+  				+ minutes + "m " + seconds + "s ";	
+            }
 			
 			
 		}, 1000);
-			
+            			
 			
 		}
 		
@@ -207,4 +228,4 @@
 		
 		
 		countdown();
-		
+
