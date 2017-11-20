@@ -256,12 +256,7 @@
 							}
 						}
 						
-					} else {
-						
-						// Else if they don't follow that date format, attempt to enter it anyway, if it doesn't work it will ask to use the correct format.
-						countDownDate = new Date(input);
-						
-					}
+					} 
 				
 				// Sets the background to the default mountain image.
 				document.getElementById("image").style.opacity = "1";
