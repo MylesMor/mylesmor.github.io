@@ -51,6 +51,7 @@
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
 				document.getElementById("image").src = "images/halloween.jpg";
+				document.getElementById("")
 	
 				break;
 				
@@ -173,7 +174,13 @@
 				
 				// Sets the background to the default mountain image.
 				document.getElementById("image").style.opacity = "1";
+					
+				if (isMobile) {
+				document.getElementById("image").src = "images/sea.jpg";
+
+				} else {
 				document.getElementById("image").src = "images/landscape.jpg";
+				}
 
 
 
