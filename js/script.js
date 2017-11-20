@@ -5,8 +5,10 @@
         	document.getElementById("enter").click();
     		}
 		});
-
-
+		
+		// Check if mobile.
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            console.log(isMobile);
 
 
 		function countdown() {
@@ -23,10 +25,7 @@
             document.getElementById('cover').style.backgroundImage = "none";
             
             aprilfools = false;
-            
-            // Check if mobile.
-            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            console.log(isMobile);
+        
             
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
@@ -245,7 +244,22 @@
 		document.getElementById("time").innerHTML = "...";
 		
 		}
-		
+
+if (!isMobile) {
+	document.createElement("img").className("load").src = "images/christmas.jpg";
+	document.createElement("img").className("load").src = "images/fireworks.jpg";
+	document.createElement("img").className("load").src = "images/halloween.jpg";
+	document.createElement("img").className("load").src = "images/valentines.jpg";
+	document.createElement("img").className("load").src = "images/patrick.jpg";
+	document.createElement("img").className("load").src = "images/landscape.jpg";
+} else {
+	document.createElement("img").className("load").src = "images/sea.jpg";
+	document.createElement("img").className("load").src = "images/christmasmobile.jpg";
+	document.createElement("img").className("load").src = "images/clovermobile.jpg";
+	document.createElement("img").className("load").src = "images/halloweenmobile.jpg";
+	document.createElement("img").className("load").src = "images/fireworksmobile.jpg";
+	document.createElement("img").className("load").src = "images/valentinesmobile.jpg";
+}
 		
 		countdown();
 
