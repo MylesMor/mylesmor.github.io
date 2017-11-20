@@ -13,15 +13,20 @@
 		var countDownDate;
 		  
         var aprilfools = false;
-			
+            
 		var month = new Date().getMonth()+1;
 		var day = new Date().getDate();
 		
 		// Runs when button is clicked or enter is pressed.
 		document.getElementById('enter').onclick = function() {
 			            
+            document.getElementById('cover').style.backgroundImage = "none";
+            
             aprilfools = false;
+            
+            // Check if mobile.
             var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            console.log(isMobile);
             
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
