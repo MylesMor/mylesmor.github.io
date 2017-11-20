@@ -6,7 +6,10 @@
     		}
 		});
 		
+		document.getElementById("image").src = "images/landscape.jpg";
 		
+
+
 		function countdown() {
 		var countDownDate;
 		
@@ -206,9 +209,6 @@
 		}
 		
 		
-		countdown()
+		countdown();
+		setBackground();
 		
-		document.getElementById("cover").style.backgroundImage = "url('images/landscape.jpg')";
-		document.getElementById("cover").style.backgroundSize = "cover";
-		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
-		document.getElementById("cover").style.backgroundRepeat = "no-repeat";
