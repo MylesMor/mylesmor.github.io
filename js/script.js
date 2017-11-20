@@ -21,6 +21,7 @@
 		document.getElementById('enter').onclick = function() {
 			            
             aprilfools = false;
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
@@ -60,7 +61,13 @@
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/christmas.jpg"
+
+                if (isMobile) {
+                    document.getElementById("image").src = "images/christmasmobile.jpg";
+                } else {
+                    document.getElementById("image").src = "images/christmas.jpg";
+                }
+
 
 					break;
 
