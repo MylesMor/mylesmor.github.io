@@ -7,7 +7,7 @@
 		});
 
 
-
+		
 
 		function countdown() {
 		var countDownDate;
@@ -16,6 +16,8 @@
             
 		var month = new Date().getMonth()+1;
 		var day = new Date().getDate();
+			
+		var w;
 		
 		// Runs when button is clicked or enter is pressed.
 		document.getElementById('enter').onclick = function() {
@@ -26,11 +28,11 @@
             
             // Check if mobile.
             var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            console.log(isMobile);
             
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
    			var input = document.getElementById("myText").value.toLowerCase();
+			
 			
 			// Runs through all the special cases where the date and background should be set to something specific.
 			switch(input.replace(/\s+/g, "")) {
@@ -50,12 +52,24 @@
 				// Set the new date for the timer to count to, and also set the background.
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-					if (!isMobile) {
+					console.log(w);
+					if (!isMobile || w >= 800) {
 				document.getElementById("image").src = "images/halloween.jpg";
 					} else {
 				document.getElementById("image").src = "images/halloweenmobile.jpg";
+					}
+					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 800) {
+					document.getElementById("image").src = "images/halloween.jpg";
+				} else {
+					document.getElementById("image").src = "images/halloweenmobile.jpg";
 
-					}	
+					}
+						});
+
+					
+					
 				break;
 				
 				case "christmas": 
@@ -70,13 +84,23 @@
 				}
 				countDownDate = new Date("December 25, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-                    
+                if (!isMobile && window.innerHeight >= 750) {
+					document.getElementById("image").src = "images/christmas.jpg";
+				} else {
+					document.getElementById("image").src = "images/christmasmobile.jpg";
+
+					}
+					
                 // If mobile provide a more suitable image.
-                if (isMobile) {
-                    document.getElementById("image").src = "images/christmasmobile.jpg";
-                } else {
-                    document.getElementById("image").src = "images/christmas.jpg";
-                }
+   					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 750) {
+					document.getElementById("image").src = "images/christmas.jpg";
+				} else {
+					document.getElementById("image").src = "images/christmasmobile.jpg";
+
+					}
+						});
 
 
 					break;
@@ -94,12 +118,21 @@
 				
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-				if (!isMobile) {
+				if (!isMobile && window.innerWidth >= 900) {
 					document.getElementById("image").src = "images/fireworks.jpg";
 				} else {
 					document.getElementById("image").src = "images/fireworksmobile.jpg";
 
 					}
+					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 900) {
+					document.getElementById("image").src = "images/fireworks.jpg";
+				} else {
+					document.getElementById("image").src = "images/fireworksmobile.jpg";
+
+					}
+						});
 					break;
 
 				case "valentine'sday":
@@ -115,13 +148,25 @@
 					
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-				if (!isMobile) {
+
+				if (!isMobile && window.innerWidth >= 900) {
 					document.getElementById("image").src = "images/valentines.jpg";
 				} else {
 					document.getElementById("image").src = "images/valentinesmobile.jpg";
 
 					}
+					
+				                // If mobile provide a more suitable image.
+   					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 900) {
+					document.getElementById("image").src = "images/valentines.jpg";
+				} else {
+					document.getElementById("image").src = "images/valentinesmobile.jpg";
 
+					}
+					});
+					
 				break;
 					
 				case "stpatrick'sday":
@@ -136,12 +181,22 @@
 					
 				countDownDate = new Date("March 17, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-					if (!isMobile) {
+					if (!isMobile && window.innerWidth >= 900) {
 				document.getElementById("image").src = "images/patrick.jpg";
 					} else {
 				document.getElementById("image").src = "images/clovermobile.jpg";
 
 					}
+						
+   					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 900) {
+					document.getElementById("image").src = "images/patrick.jpg";
+				} else {
+					document.getElementById("image").src = "images/clovermobile.jpg";
+
+					}
+					});
 				
 				break;
 					
@@ -191,12 +246,21 @@
 				// Sets the background to the default mountain image.
 				document.getElementById("image").style.opacity = "1";
 					
-				if (isMobile) {
-				document.getElementById("image").src = "images/sea.jpg";
-
+				if (!isMobile && window.innerWidth >= 900) {
+					document.getElementById("image").src = "images/landscape.jpg";
 				} else {
-				document.getElementById("image").src = "images/landscape.jpg";
-				}
+					document.getElementById("image").src = "images/sea.jpg";
+
+					}
+					window.addEventListener("resize", function() {
+    				w = window.innerWidth;
+				if (!isMobile && w >= 900) {
+					document.getElementById("image").src = "images/landscape.jpg";
+				} else {
+					document.getElementById("image").src = "images/sea.jpg";
+
+					}
+						});
 
 
 
@@ -207,7 +271,7 @@
 			            
 			// This code runs once every second to calculate the time correctly.
 			var x = setInterval(function() {
-			
+				
 			// Gets the current time.
   			var now = new Date().getTime();
 			
