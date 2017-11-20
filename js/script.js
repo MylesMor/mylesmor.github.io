@@ -29,6 +29,8 @@
 				case "halloween":
 				case "october31":
 				case "31october":
+				case "31/10/" + year:
+
 					
 					// If the Halloween for this year has already passed, add one to the year.
 					if (month == 11 || 12) {
@@ -47,6 +49,7 @@
 				case "christmasday":
 				case "december25":
 				case "25december":
+
 					
 				if (month == 12 && day >= 25) {
 					year = year + 1;
@@ -79,6 +82,7 @@
 				case "valentine's":
 				case "valentinesday":
 				case "valentine":
+
 					
 					if (month >= 2 && day >= 14) {
 						year = year + 1;
@@ -203,3 +207,8 @@
 		
 		
 		countdown()
+		
+		document.getElementById("cover").style.backgroundImage = "url('images/mountain.jpg')";
+		document.getElementById("cover").style.backgroundSize = "cover";
+		document.getElementById("cover").style.setProperty("-webkit-transition", "background-image 1s ease-in-out");
+		document.getElementById("cover").style.backgroundRepeat = "no-repeat";
