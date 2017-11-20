@@ -5,10 +5,8 @@
         	document.getElementById("enter").click();
     		}
 		});
-		
-		// Check if mobile.
-		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            console.log(isMobile);
+
+
 
 
 		function countdown() {
@@ -25,7 +23,10 @@
             document.getElementById('cover').style.backgroundImage = "none";
             
             aprilfools = false;
-        
+            
+            // Check if mobile.
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            console.log(isMobile);
             
 			// Gets the current date and year in a standard format.
 			var year = new Date().getYear()-100 + 2000;
@@ -260,6 +261,7 @@
 		document.getElementById("time").innerHTML = "...";
 		
 		}
+<<<<<<< HEAD
 
 if (!isMobile) {
 	var christmas = document.createElement("img");
@@ -300,6 +302,9 @@ if (!isMobile) {
 	ny.className = "load";
 	ny.src = "images/fireworksmobile.jpg";
 }
+=======
+		
+>>>>>>> parent of e43bc6d... CHanges
 		
 		countdown();
 
