@@ -49,9 +49,12 @@
 				// Set the new date for the timer to count to, and also set the background.
 				countDownDate = new Date("October 31, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
+					if (!isMobile) {
 				document.getElementById("image").src = "images/halloween.jpg";
-				document.getElementById("")
-	
+					} else {
+				document.getElementById("image").src = "images/halloweenmobile.jpg";
+
+					}	
 				break;
 				
 				case "christmas": 
@@ -89,9 +92,13 @@
 					year = year + 1;
 				
 				countDownDate = new Date("January 1, " + year + " 00:00:00");
-				document.getElementById("image").src = "images/fireworks.jpg";
 				document.getElementById("image").style.opacity = "1";
+				if (!isMobile) {
+					document.getElementById("image").src = "images/fireworks.jpg";
+				} else {
+					document.getElementById("image").src = "images/fireworksmobile.jpg";
 
+					}
 					break;
 
 				case "valentine'sday":
@@ -107,7 +114,12 @@
 					
 				countDownDate = new Date("February 14, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/valentines.jpg";
+				if (!isMobile) {
+					document.getElementById("image").src = "images/valentines.jpg";
+				} else {
+					document.getElementById("image").src = "images/valentinesmobile.jpg";
+
+					}
 
 				break;
 					
@@ -123,7 +135,12 @@
 					
 				countDownDate = new Date("March 17, " + year + " 00:00:00");
 				document.getElementById("image").style.opacity = "1";
+					if (!isMobile) {
 				document.getElementById("image").src = "images/patrick.jpg";
+					} else {
+				document.getElementById("image").src = "images/clovermobile.jpg";
+
+					}
 				
 				break;
 					
@@ -138,7 +155,6 @@
 				
 				countDownDate = new Date("April 1, " + year + " 00:00:00");
                 document.getElementById("image").style.opacity = "1";
-				document.getElementById("image").src = "images/landscape.jpg";
                 aprilfools = true;
 				break;
 					
