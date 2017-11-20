@@ -4,13 +4,7 @@ html, body {
     width = 100%;
     margin: 0;
     height = 100%;
-	background-image: url("../images/landscape.jpg");
-	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-	max-width: 100%;
-    background-repeat: no-repeat;
+
 }
 
 #time {
@@ -50,6 +44,13 @@ html, body {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	background-image: url("../images/landscape.jpg");
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	max-width: 100%;
+    background-repeat: no-repeat;
 	
 }
 
@@ -87,6 +88,7 @@ html, body {
 	width: auto;
     height: auto;
     max-width: 100%;
+	transform: scale(1.5);
 }
 
 
