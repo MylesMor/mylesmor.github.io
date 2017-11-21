@@ -114,6 +114,7 @@
 				case "newyears": 
 				case "1january": 
 				case "january1":
+				case "newyearsday":
 					
 					// A year is always added as the new year will always be in the next year.
 					year = year + 1;
