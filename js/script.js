@@ -334,7 +334,7 @@
 			
 		}
 		
-		// Starting 
+		// Starting ... in box.
 		document.getElementById("time").innerHTML = "...";
 			
 		
