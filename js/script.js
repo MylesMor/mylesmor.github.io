@@ -226,9 +226,8 @@
 					}
 					
 					var spacesplit = [];
-					if ((input.includes(" "))) {
 						spacesplit = input.split(" ");
-					}
+					
 			
 					
 					// Checks that the day, month and year are all integers.
