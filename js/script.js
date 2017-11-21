@@ -42,6 +42,8 @@
 				case "october31":
 				case "31october":
 				case "31/10/" + year:
+				case "allhallowseve":
+				case "allhallow'seve":
 
 					
 					// If the Halloween for this year has already passed, add one to the year.
